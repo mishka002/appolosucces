@@ -1,0 +1,42 @@
+<!-- Home Section -->
+
+<section id="home" class="main-contact parallax-section ninomk">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h1>კონტაქტი</h1>
+               </div>
+
+          </div>
+     </div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12 ">
+                    <form action="/contact" class="sendmail" method="post">
+                         <div class="col-md-4 col-sm-4">
+                              <input type="text" class="form-control" name="name" id="name" placeholder="სახელი" required>
+                         </div>
+                         <div class="col-md-4 col-sm-4">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="ელ-ფოსტა" required>
+                      	</div>
+                         <div class="col-md-4 col-sm-4">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="თემა" required>
+                      	 </div>
+                         <div class="col-md-12 col-sm-12">
+                              <textarea rows="5" class="form-control" name="message" id="message" placeholder="შეტყობინება" required></textarea>
+                         </div>
+                         <div class="col-md-3 col-sm-6">
+                              <input type="submit" class="form-control submit" value="<%- emailst %>">
+                         </div>
+                    </form>
+               </div>
+
+          </div>
+     </div>
+</section>

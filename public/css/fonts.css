@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "BPG Web 002";
+    src: url('/fonts/bpg-web-002-webfont.ttf');
+}
+@font-face {
+    font-family: "BPG WEB 001 Caps";
+    src: url('/fonts/bpg-web-001-caps-webfont.ttf');
+}
+@font-face {
+    font-family: "BPG Nino Mkhedruli";
+    src: url('/fonts/bpg_nino_mtavruli_bold.ttf');
+}
+
+@font-face {
+    font-family: "ucnobi";
+    src: url('/fonts/bpg-ucnobi-webfont.ttf');
+}
+@font-face {
+    font-family: "BPG Rioni Contrast";
+    src: url('/fonts/bpg-rioni-contrast-webfont.ttf');
+}
+.ucnobi {
+    font-family: "ucnobi";
+}
+.rioncontrast {
+    font-family: "BPG Rioni Contrast";
+}
+.ninomk {
+    font-family: "BPG Nino Mkhedruli";
+}
+.web02font {
+    font-family: "BPG Web 002";
+}
+.web01font {
+    font-family: "BPG WEB 001 Caps";
+    
+}

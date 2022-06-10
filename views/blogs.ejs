@@ -1,0 +1,41 @@
+
+<style>
+     .modal-body {
+          padding: 100%;
+     }
+</style>
+
+<!-- Home Section -->
+
+<section id="home" class="main-gallery parallax-section ninomk">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h1>ბლოგები</h1>
+                    <h3>
+                         <%- blogcount %>
+                    </h3>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Gallery Section -->
+
+<section id="gallery">
+     <div class="container">
+          <!-- <div class="btn-group" role="group" aria-label="Basic outlined example">
+               <button type="button" class="btn btn-outline-primary">Left</button>
+               <button type="button" class="btn btn-outline-primary">Middle</button>
+               <button type="button" class="btn btn-outline-primary">Right</button>
+          </div> -->
+          <div class="rows" style="margin-top: 1rem;">
+
+               <%- bloglist %>
+
+          </div>
+     </div>
+</section>

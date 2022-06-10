@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <title><%- title %></title>
+    <style>
+        body {
+            font-family: "BPG WEB 001 Caps";
+            
+            text-decoration: none;
+        }
+        .getcenter {
+            display: flex;
+            align-items: center;
+       
+        }
+        .revs {
+            background: #41464b4b;
+            height: 100vh;
+            width: 100%;
+            color: beige;
+            display: flex;
+            border-radius: 1rem;
+            position: relative;
+        }
+        .revimgs {
+            width: 50%;
+            height: 100%;
+            padding: 0.5rem;
+        }
+        .revimgs img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2.5%;
+        }
+        .revstxt {
+            width: 50%;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        .txt {
+            padding: 0.5rem;
+            position: relative;
+            height: 100vh;
+            border-radius: 5px;
+        }
+        .revs-title {
+            padding: 1rem;
+            background: #212529;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .revs-text {
+            padding: 0.5rem;
+            overflow-y: auto;
+            background: #212529;
+            max-height: 90%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .added-dt {
+            position: absolute;
+            bottom: 1rem;
+            font-weight: bolder;
+            padding-top: 1rem;
+        }
+        .backbtn {
+            position: absolute;
+            top: 0.5rem;
+            padding: 10px 5px;
+            border-radius: 5px;
+            background: #555;
+            color: #888;
+
+        }
+        .backbtn a {
+            padding: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-family: "BPG WEB 001 Caps";
+
+        }
+        .ale {
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            height: 100vh;
+            justify-content: center;
+        }
+        .dnone {
+            display: none;
+        }
+  
+        label {
+            cursor: pointer;
+        }
+        input[type=color] {
+            background: none;
+            border: none;
+        }
+        .sub {
+            width: 91px;
+            margin: 1rem auto;
+        }
+        .scrolldown {
+            width: 100%;
+            text-align: center;
+            margin: 1rem 0;
+            
+        }
+                /* width */
+        ::-webkit-scrollbar {
+        width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #888; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+        }
+        .readpdf {
+            position: fixed;
+            bottom: 9px;
+            right: 9px;
+            font-size: 24px;
+        }
+        .readpdf a {
+            text-decoration: none;
+            color: #f1f1f1;
+            box-shadow: 0 0 5px #212529;
+        }
+    </style>
+</head>
+<body>
+    <div class="ale">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 400px;">
+            <strong>პარამეტრები</strong> 
+            <hr style="width: 120px;height: 1px;background: #212529;">
+            <div class="row">
+                <div class="col">
+                    <label for="bg" class="form-label">ფონის ფერი</label>
+                    <input type="color" class="form-control form-control-color" id="bg" value="#212529" title="Choose your color">
+                </div>
+                <div class="col">
+                    <label for="fontcolor" class="form-label">წარწერების ფერი</label>
+                    <input type="color" class="form-control form-control-color" id="fontcolor" value="#fffafa" title="Choose your color">
+                </div>
+              </div>
+              <div class="sub">
+                <a type="button" class="btn btn-outline-success" onclick="blogcolors()"href="#read">გაშვება</a>
+                <span class="scrolldown" style="display: none;">ჩასქროლე<i class="fa fa-angle-down"></i></span>
+              </div>
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button> -->
+        </div>
+    </div>
+    
+
+    <%- review %>
+
+    
+    <script>
+        function blogcolors() {
+            let bg = document.querySelector('#bg').value 
+            let fontcolor = document.querySelector('#fontcolor').value
+            let setbg = document.querySelector('.revs-title')
+            let textbg = document.querySelector('.revs-text')
+
+            textbg.style.background = bg
+            textbg.style.color = fontcolor
+            setbg.style.background = bg
+            setbg.style.color = fontcolor
+
+            document.querySelector('.dnone').style.display = 'block'
+            document.querySelector('.scrolldown').style.display = 'block'
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/8340299b99.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
